@@ -144,8 +144,9 @@ button:active {
   /* Scale down the result card */
   .quantum-card {
     transform: scale(0.85);
-    transform-origin: top center;
-    margin-top: 10px;
+    transform-origin: center center;
+    margin-bottom: -60px;
+    /* Pull buttons up */
   }
 
   .result-container {
