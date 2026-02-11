@@ -15,14 +15,19 @@ export default function InputForm({ onConfirm }) {
 
     return (
         <div className={`input-container ${exiting ? 'fade-out' : 'fade-in'}`} style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100dvh',
+            overflow: 'hidden',
+            margin: 0,
+            padding: 0,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '100%',
-            padding: '2rem',
             boxSizing: 'border-box',
-            minHeight: '100vh',
-            overflow: 'hidden'
+            backgroundColor: '#000'
         }}>
             {/* Glass Card */}
             <div className="glass-card" style={{
@@ -32,11 +37,10 @@ export default function InputForm({ onConfirm }) {
                 borderRadius: '20px',
                 border: '1px solid rgba(255, 215, 0, 0.1)',
                 boxShadow: '0 0 30px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 215, 0, 0.1)',
-                width: '100%',
+                width: '90%',
                 maxWidth: '450px',
                 textAlign: 'center',
                 position: 'relative',
-                overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center'
