@@ -125,16 +125,19 @@ export default function ResultCard({ data, onReset }) {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '25px',
+            justifyContent: 'center',
+            gap: '20px',
             width: '100%',
-            paddingBottom: '20px'
+            padding: '20px 0',
+            minHeight: 'auto'
         }}>
-            {/* KART (EKRANDA GÖRÜNEN - HİÇBİR ŞEKİLDE DOKUNULMAZ) */}
+            {/* KART (EKRANDA GÖRÜNEN) */}
             <div
                 ref={cardRef}
                 className="quantum-card"
                 style={{
                     width: '320px',
+                    maxWidth: '90vw',
                     minHeight: '568px',
                     background: 'linear-gradient(135deg, rgba(10, 10, 42, 0.95) 0%, rgba(26, 26, 64, 0.95) 100%)',
                     border: '1px solid rgba(255, 215, 0, 0.5)',
@@ -149,7 +152,7 @@ export default function ResultCard({ data, onReset }) {
                     backdropFilter: 'blur(5px)'
                 }}
             >
-                {/* --- İÇERİK (AYNI KALIYOR) --- */}
+                {/* ... KART İÇERİĞİ AYNEN KALSIN ... */}
                 <div style={{
                     position: 'absolute',
                     top: '-50px',
@@ -199,8 +202,14 @@ export default function ResultCard({ data, onReset }) {
                 </div>
             </div>
 
-            {/* BUTONLAR */}
-            <div style={{ display: 'flex', gap: '20px' }}>
+            {/* BUTONLAR - Mobilde sabit kalmaması için position sticky/fixed kullanmıyoruz */}
+            <div style={{
+                display: 'flex',
+                gap: '20px',
+                marginTop: '10px',
+                flexWrap: 'wrap',
+                justifyContent: 'center'
+            }}>
                 <button
                     onClick={handleDownload}
                     disabled={isDownloading}

@@ -9,7 +9,7 @@ export default function InputForm({ onConfirm }) {
         e.preventDefault();
         if (name && sentence) {
             setExiting(true);
-            setTimeout(() => onConfirm(name, sentence), 500); // Wait for fade out
+            setTimeout(() => onConfirm(name, sentence), 500);
         }
     };
 
@@ -19,7 +19,10 @@ export default function InputForm({ onConfirm }) {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            padding: '2rem'
+            padding: '2rem',
+            boxSizing: 'border-box',
+            minHeight: '100vh',
+            overflow: 'hidden'
         }}>
             {/* Glass Card */}
             <div className="glass-card" style={{
@@ -61,7 +64,7 @@ export default function InputForm({ onConfirm }) {
                     QUANTUM<br />KİMLİĞİ
                 </h1>
 
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', position: 'relative' }}>
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', position: 'relative', width: '100%' }}>
                     <div style={{ position: 'relative' }}>
                         <input
                             type="text"
@@ -71,7 +74,7 @@ export default function InputForm({ onConfirm }) {
                             required
                             style={{
                                 width: '100%',
-                                background: 'rgba(0, 0, 0, 0.2)', // Slightly darker input bg for contrast
+                                background: 'rgba(0, 0, 0, 0.2)',
                                 border: 'none',
                                 borderBottom: '2px solid rgba(255, 255, 255, 0.1)',
                                 borderRadius: '5px 5px 0 0',
