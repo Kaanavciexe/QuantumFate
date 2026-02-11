@@ -92,7 +92,7 @@ export default function InputForm({ onConfirm }) {
                     <div style={{ position: 'relative' }}>
                         <input
                             type="text"
-                            placeholder="Bir cümle yazın"
+                            placeholder="Aklınıza ilk gelen kelime"
                             value={sentence}
                             onChange={(e) => setSentence(e.target.value)}
                             required

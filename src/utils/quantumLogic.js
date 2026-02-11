@@ -145,18 +145,16 @@ export const getQuantumData = (name, sentence) => {
 
     const statuses = [entropi, momentum, dolaniklik, spin, isima];
 
-    // Position on 100x100 grid - POLAR COORDINATES to ensure inside circle
-    // Center is 50, 50
-    // Max radius should be around 45 to keep icon inside the 50% radius container (accounting for icon size)
 
-    // Hash-based randoms
-    const angle = (getVal(6) / 100) * 2 * Math.PI; // 0 to 2PI
-    const radius = (getVal(7) / 100) * 42; // 0 to 42% radius (safe margin from 50%)
+    const rand = getVal(7) / 100;
+    const shaped = 1 - Math.abs(rand - 0.5) * 2;
+    const radius = Math.pow(shaped, 0.7) * 42;
+
+    const angle = (getVal(6) / 100) * 2 * Math.PI;
 
     const userX = 50 + radius * Math.cos(angle);
     const userY = 50 + radius * Math.sin(angle);
 
-    // Find closest particle
     let closestDist = Infinity;
     let closestParticle = particles[0];
 
@@ -174,7 +172,7 @@ export const getQuantumData = (name, sentence) => {
         seed,
         name,
         sentence,
-        statuses, // The 5 percental statuses
+        statuses,
         userPos: { x: userX, y: userY },
         particle: closestParticle,
         allParticles: particles
