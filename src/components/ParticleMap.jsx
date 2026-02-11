@@ -66,20 +66,22 @@ const ParticleMap = ({ userPos, closestParticle, seed, particles }) => {
                     top: `${p.y}%`,
                     width: '14px',
                     height: '14px',
-                    marginLeft: '-7px', // Center using margin instead of transform
+                    marginLeft: '-7px',
                     marginTop: '-7px',
                     borderRadius: '50%',
                     background: p.color,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    display: 'block',
+                    textAlign: 'center',
+                    lineHeight: '14px',
                     fontSize: '9px',
                     color: '#000',
                     fontWeight: 'bold',
                     boxShadow: `0 0 6px ${p.color}`,
                     opacity: 0.9,
                     cursor: 'default',
-                    zIndex: 5
+                    zIndex: 5,
+                    boxSizing: 'border-box',
+                    padding: 0
                 }} title={p.name}>
                     {p.symbol}
                 </div>
