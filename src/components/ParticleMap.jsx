@@ -66,9 +66,10 @@ const ParticleMap = ({ userPos, closestParticle, seed, particles }) => {
                     top: `${p.y}%`,
                     width: '14px',
                     height: '14px',
+                    marginLeft: '-7px', // Center using margin instead of transform
+                    marginTop: '-7px',
                     borderRadius: '50%',
                     background: p.color,
-                    transform: 'translate(-50%, -50%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -91,9 +92,10 @@ const ParticleMap = ({ userPos, closestParticle, seed, particles }) => {
                 top: `${userPos.y}%`,
                 width: '14px',
                 height: '14px',
+                marginLeft: '-7px',
+                marginTop: '-7px',
                 borderRadius: '50%',
                 background: 'white',
-                transform: 'translate(-50%, -50%)',
                 boxShadow: '0 0 10px 2px white, 0 0 20px 5px var(--gold)', // Strong static shadow
                 zIndex: 10,
                 // animation: 'pulse 2s infinite' // Removed animation for reliable capture, or add separate element
@@ -105,8 +107,9 @@ const ParticleMap = ({ userPos, closestParticle, seed, particles }) => {
                 top: `${userPos.y}%`,
                 width: '14px',
                 height: '14px',
+                marginLeft: '-7px',
+                marginTop: '-7px',
                 borderRadius: '50%',
-                transform: 'translate(-50%, -50%)',
                 boxShadow: '0 0 15px 5px var(--gold)',
                 zIndex: 9,
                 animation: 'pulse 2s infinite'
@@ -126,9 +129,9 @@ const ParticleMap = ({ userPos, closestParticle, seed, particles }) => {
 
             <style>{`
                 @keyframes pulse {
-                    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-                    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
-                    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+                    0% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.2); opacity: 0.8; }
+                    100% { transform: scale(1); opacity: 1; }
                 }
             `}</style>
         </div>
