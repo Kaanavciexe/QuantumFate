@@ -22,7 +22,7 @@ export default function InputForm({ onConfirm }) {
             padding: '2rem'
         }}>
             {/* Glass Card */}
-            <div style={{
+            <div className="glass-card" style={{
                 background: 'rgba(255, 255, 255, 0.05)',
                 backdropFilter: 'blur(10px)',
                 padding: '3rem 2.5rem',

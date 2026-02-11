@@ -89,7 +89,7 @@ export default function QuantumAnimation({ onComplete }) {
                 }
             `}</style>
 
-            <div style={{ position: 'relative', width: '300px', height: '300px' }}>
+            <div className="animation-inner-container" style={{ position: 'relative', width: '300px', height: '300px' }}>
 
                 {/* 1. Center Flashing Yellow Light */}
                 <div style={{

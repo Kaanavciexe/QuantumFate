@@ -118,3 +118,37 @@ button:hover {
 button:active {
   transform: translateY(1px);
 }
+
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 480px) {
+
+  /* Scale down the input form card */
+  .glass-card {
+    padding: 2rem 1.5rem !important;
+    width: 90% !important;
+    max-width: none !important;
+  }
+
+  .glass-card h1 {
+    font-size: 1.5rem !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Scale down the loading animation */
+  .animation-inner-container {
+    transform: scale(0.7);
+    transform-origin: center center;
+  }
+
+  /* Scale down the result card */
+  .quantum-card {
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin-top: 10px;
+  }
+
+  .result-container {
+    gap: 15px !important;
+  }
+}
